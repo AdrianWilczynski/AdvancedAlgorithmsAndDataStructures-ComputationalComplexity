@@ -1,0 +1,1 @@
+dotnet publish GraphProperties -r win-x86 -c Release /p:PublishSingleFile=true /p:PublishTrimmed=true
