@@ -158,7 +158,24 @@ namespace GraphProperties.Tests
                     subgraphCount: 1,
                     isCyclic: true,
                     isTree: false)
-            }
+            },
+            new object[]
+            {
+                new TestData(
+                    graph: new Graph(Converter.ToBooleanArray(new int[5, 5]
+                        {
+                            { 0, 1, 0, 0, 0 },
+                            { 1, 0, 0, 0, 0 },
+                            { 0, 0, 0, 1, 1 },
+                            { 0, 0, 1, 0, 1 },
+                            { 0, 0, 1, 1, 0 }
+                        })),
+                    isBipartite: false,
+                    isConnected: false,
+                    subgraphCount: 2,
+                    isCyclic: true,
+                    isTree: false)
+            },
         };
 
         [Theory]
