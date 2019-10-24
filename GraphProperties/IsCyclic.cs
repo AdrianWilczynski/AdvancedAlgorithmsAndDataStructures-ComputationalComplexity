@@ -8,18 +8,18 @@ namespace GraphProperties
         {
             var visited = new bool[graph.VertexCount];
 
-            foreach (var vertext in graph.Vertices)
+            foreach (var vertex in graph.Vertices)
             {
-                if (visited[vertext])
+                if (visited[vertex])
                 {
                     continue;
                 }
 
                 var stack = new Stack<int>();
-                stack.Push(vertext);
+                stack.Push(vertex);
                 stack.Push(-1);
 
-                visited[vertext] = true;
+                visited[vertex] = true;
 
                 while (stack.Count > 0)
                 {
