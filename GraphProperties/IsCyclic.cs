@@ -15,23 +15,19 @@ namespace GraphProperties
                     continue;
                 }
 
-                var stack = new Stack<int>();
-                stack.Push(vertex);
-                stack.Push(-1);
+                var stack = new Stack<(int current, int? preceding)>(new[] { (vertex, (int?)null) });
 
                 visited[vertex] = true;
 
                 while (stack.Count > 0)
                 {
-                    var preceding = stack.Pop();
-                    var current = stack.Pop();
+                    var (current, preceding) = stack.Pop();
 
                     foreach (var neighbour in graph.Neighbours(current))
                     {
                         if (!visited[neighbour])
                         {
-                            stack.Push(neighbour);
-                            stack.Push(current);
+                            stack.Push((current: neighbour, preceding: current));
 
                             visited[neighbour] = true;
                         }
