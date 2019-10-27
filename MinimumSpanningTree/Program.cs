@@ -54,7 +54,7 @@ namespace MinimumSpanningTree
             var vertexCount = adjacencyMatrix.GetLength(0);
 
             var included = new bool[vertexCount];
-            var costsOfIncluding = (Enumerable.Repeat((isReachable: false, value: int.MaxValue), vertexCount)).ToArray();
+            var costsOfIncluding = Enumerable.Repeat((isReachable: false, value: int.MaxValue), vertexCount).ToArray();
 
             var totalWeight = 0;
 
