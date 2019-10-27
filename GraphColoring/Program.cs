@@ -75,6 +75,11 @@ namespace GraphColoring
             {
                 for (int color = 1; color <= colorCount; color++)
                 {
+                    if (vertex == 0 && color == 2)
+                    {
+                        break;
+                    }
+
                     if (!NeighbouringColors(vertex).Contains(color))
                     {
                         colors[vertex] = color;
