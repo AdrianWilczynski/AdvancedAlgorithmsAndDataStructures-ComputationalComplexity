@@ -129,4 +129,4 @@ let main _ =
     |> Seq.map (toAdjacencyMatrix >> findShortestPaths)
     |> printSolution
 
-    0 // return an integer exit code
+    0
