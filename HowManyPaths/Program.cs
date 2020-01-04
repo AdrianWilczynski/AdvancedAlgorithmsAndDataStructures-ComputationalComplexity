@@ -116,7 +116,7 @@ namespace HowManyPaths
         public static void SetInRange(this int[,] array, (int x, int y) possition, int value)
         {
             if (possition.IsInRange(array.GetLength(0)))
-                array[possition.x, possition.y] += value;
+                array[possition.x, possition.y] = value;
         }
 
         public static int GetInRange(this int[,] array, (int x, int y) possition)
