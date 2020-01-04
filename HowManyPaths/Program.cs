@@ -44,13 +44,13 @@ namespace HowManyPaths
             pathsPerField.SetInRange(center.Right(), 1);
             pathsPerField.SetInRange(center.Down(), 1);
 
-            for (int _ = 1; _ < numberOfMoves; _++)
+            for (var _ = 1; _ < numberOfMoves; _++)
             {
                 var updatedPathsPerField = new int[boardSize, boardSize];
 
-                for (int x = 0; x < boardSize; x++)
+                for (var x = 0; x < boardSize; x++)
                 {
-                    for (int y = 0; y < boardSize; y++)
+                    for (var y = 0; y < boardSize; y++)
                     {
                         var possition = (x, y);
 
