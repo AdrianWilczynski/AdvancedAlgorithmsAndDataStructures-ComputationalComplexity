@@ -91,7 +91,7 @@ namespace ThreeSATToHamiltonianPath
 
         public static string C(int index) => $"C_{index}";
 
-        public static string Vertical(int index) => $"V-{index}";
+        public static string Vertical(int index) => $"V_{index}";
     }
 
     #region Models
